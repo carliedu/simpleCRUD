@@ -5,7 +5,7 @@ To create the Database/Table, use:
 
 ``CREATE TABLE Users
 (
-    id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    userCode TEXT(16) NOT NULL PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
     email VARCHAR(255) NOT NULL,
     CONSTRAINT users_email_uindex UNIQUE (email)
