@@ -1,8 +1,6 @@
 <?php
 	date_default_timezone_set('America/Sao_Paulo');
 	error_reporting(E_ALL);
-	echo("\n\n\n\n\n\n\n\n");
-	echo(date("d/m/Y-G:i:s")." (crud.php) INI---INI---INI---INI---INI---INI---INI---INI---INI---INI---INI---\n");
 
 	use React\EventLoop\Factory;
 	use src\dbClass;
@@ -15,6 +13,7 @@
 		
 		$db = new dbClass($loop);
 	
+//		(R)ead an users data
 		$UserData = $db->getUser("user1");
 		print_r($UserData);
 	
