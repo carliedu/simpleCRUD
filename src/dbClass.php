@@ -6,7 +6,7 @@
 	use Dotenv\Dotenv;
 	use React\MySQL\QueryResult;
 	use React\Promise\PromiseInterface;
-	use App\Usuarios\Usuario1;
+	use App\Users\User;
 
 	final class dbClass {
 //		public $m, 	$i, 	$n,		$o;
@@ -41,7 +41,7 @@
 //			OBS.: Este metodo na usa Promise. Criado para acelerar o desenvolvimento
 			echo(date("d/m/Y-G:i:s")." (/src/dbClass.php) Execute method getUser(".$userCode.")\n");
 			$this->connection
-			->query("SELECT * FROM Usuarios WHERE UserCode = '".$userCode."';")
+			->query("SELECT * FROM Users WHERE UserCode = '".$userCode."';")
 			->then(
 				function (QueryResult $result) {
 					echo(date("d/m/Y-G:i:s")." (/src/dbClass.php) getUser-QueryResult\n");
