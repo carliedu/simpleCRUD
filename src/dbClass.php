@@ -39,7 +39,7 @@
 		{
 			echo(date("d/m/Y-G:i:s")." (/src/dbClass.php) Execute method getUser(".$userCode.")\n");
 			$this->connection
-			->query("SELECT * FROM Users WHERE UserCode = '".$userCode."';")
+			->query("SELECT * FROM Users WHERE userCode = '".$userCode."';")
 			->then(
 				function (QueryResult $result) {
 					echo(date("d/m/Y-G:i:s")." (/src/dbClass.php) getUser-QueryResult\n");
