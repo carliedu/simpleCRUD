@@ -21,11 +21,10 @@
 			    . ':' . $_ENV['DB_PASS']
 			    . '@' . $_ENV['DB_HOST']
 			    . '/' . $_ENV['DB_NAME'];
-			echo(date("d/m/Y-G:i:s")." (/src/dbClass.php) Uri: [".$uri."]\n");
+//			echo(date("d/m/Y-G:i:s")." (/src/dbClass.php) Uri: [".$uri."]\n");
 			
 			$factory = new \React\MySQL\Factory($loop);
 			$this->connection = $factory->createLazyConnection($uri);
-//			echo(date("d/m/Y-G:i:s")." (/src/dbClass.php) Connection [".(is_object($this->connection) ? ' eh objeto' : ' NAO eh objeto')."]\n" );
 
 			$this->a_Buffer = null;
 		}
@@ -38,7 +37,6 @@
 
 		public function getUser($userCode) : PromiseInterface
 		{
-//			OBS.: Este metodo na usa Promise. Criado para acelerar o desenvolvimento
 			echo(date("d/m/Y-G:i:s")." (/src/dbClass.php) Execute method getUser(".$userCode.")\n");
 			$this->connection
 			->query("SELECT * FROM Users WHERE UserCode = '".$userCode."';")
