@@ -1,2 +1,2 @@
 # simpleCRUD
-An class to have make CRUD operations on MySQL
+A class to make CRUD operations on MySQL directly, without routes.
