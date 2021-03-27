@@ -7,4 +7,28 @@ To create the Database/Table, use:
 ``ALTER TABLE `Users` ADD UNIQUE KEY `userCodeKey` (`userCode`);``
 ``COMMIT;``
 
+To install:
+
+``composer require react/event-loop``
+``composer require vlucas/phpdotenv``
+``composer require react/mysql``
+
+Edit file ``composer.json`` and add the namespace ``src``:
+
+``{
+    "require": {
+        "react/event-loop": "^1.1",
+        "vlucas/phpdotenv": "^5.3",
+        "react/mysql": "^0.5.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "src\\": "src"
+        }
+    }
+}
+``
+
+``composer install``
+``composer dump-autoload``
 
